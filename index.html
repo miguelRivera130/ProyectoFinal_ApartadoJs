@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final</title>
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+
+    <div id="Title">
+        <h1 id="Julimarketing"> Julimarketing </h1>
+    </div>
+
+    <div id="preguntaActual">
+
+    </div>
+
+    <div id="aggPregunta">
+
+        <h3 id="descripcionAgg">escriba aquí la pregunta a realizar</h3>
+        <input id="descripcionPregunta" placeholder="Pregunta nueva" type="text">
+        <button id="agg">ok</button>
+
+    </div>
+
+    <div>
+
+        <h3 id="descripcionHistorial">Historial</h3>
+
+    </div>
+
+    <div id="historial">
+
+    </div>
+
+</body>
+
+</html>
+
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase.js"></script>
+
+<script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyBeBeyLiI8Zu_H1gqVsyad30y-D3GbcIYk",
+        authDomain: "proyectofinaleco-406ac.firebaseapp.com",
+        databaseURL: "https://proyectofinaleco-406ac.firebaseio.com",
+        projectId: "proyectofinaleco-406ac",
+        storageBucket: "proyectofinaleco-406ac.appspot.com",
+        messagingSenderId: "16697007841",
+        appId: "1:16697007841:web:f7414a71830d48a08f61a0",
+        measurementId: "G-Q8X83VSTFB"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+</script>
+
+<script src="components/PreguntaActual.js"></script>
+<script src="components/Historial.js"></script>
+<script src="js/index.js"></script>
