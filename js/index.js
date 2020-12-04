@@ -6,7 +6,7 @@ const database = firebase.database();
 const apartadoHistorial = document.getElementById('historial');
 const apartadoPreguntaActual = document.getElementById('preguntaActual');
 
-//no supe como generar los promedios, el resto del funcionamiento y los bonus estan hechos.
+/*Todo en funcionamiento menos los promedios, no supe como aplicarlos*/
 
 guardarPregunta = () => {
 
@@ -15,7 +15,7 @@ guardarPregunta = () => {
 
     if (dP == '' || dP == ' '){
 
-        alert('Diligencia tu pregunta para enviarla');
+        alert('Escribe tu pregunta para que pueda ser enviada');
         return;
 
     }
@@ -35,6 +35,7 @@ guardar.addEventListener('click', guardarPregunta);
 
 database.ref('Preguntas').on('value',function(data){
 
+    
     apartadoPreguntaActual.innerHTML = '';
     apartadoHistorial.innerHTML = '';
 
@@ -45,6 +46,7 @@ database.ref('Preguntas').on('value',function(data){
             switch(list.val().estado) {
 
                 case 'PreguntaActual':
+
 
                     let val = list.val();
                     let act = new PreguntaActual(val);
@@ -61,5 +63,7 @@ database.ref('Preguntas').on('value',function(data){
                 break;
 
             }
+        
     });
+
 });

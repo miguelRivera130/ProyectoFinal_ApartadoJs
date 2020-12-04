@@ -1,5 +1,3 @@
-const database = firebase.database();
-
 class PreguntaActual {
 
     constructor(list) {
@@ -42,5 +40,4 @@ class PreguntaActual {
 
         return casillaPregunta;
     };
-
 }
